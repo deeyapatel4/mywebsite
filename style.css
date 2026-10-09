@@ -1,232 +1,169 @@
+
 /* ========================================
    DEEYA PATEL — PERSONAL WEBSITE
-   Dark Navy + Cream Editorial Portfolio
+   Responsive Web Design
    ======================================== */
 
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Sacramento&display=swap');
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Sacramento&display=swap');
+/* Base styles — mobile first */
+* {
+    box-sizing: border-box;
+}
 
-
-/* ========================================
-   BASE PAGE STYLES
-   ======================================== */
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     background-color: #f5f1e8;
-    color: #172033;
-    font-family: "DM Sans", Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.7;
+    color: #10233f;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    overflow-wrap: break-word;
 }
 
-
-/* ========================================
-   HEADER
-   ======================================== */
-
+/* Header */
 header {
     background-color: #10233f;
-    padding: 2.5rem 8% 2rem;
-    border-bottom: 6px solid #9fb6c9;
+    color: #f5f1e8;
+    text-align: center;
+    padding: 2rem 1rem;
 }
 
 header h1 {
-    color: #f5f1e8;
-    font-family: "DM Serif Display", Georgia, serif;
-    font-size: 4.5rem;
-    font-weight: 400;
-    letter-spacing: -2px;
-    line-height: 1;
-    margin: 0 0 1.5rem 0;
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0 0 1.5rem;
 }
 
-
-/* ========================================
-   NAVIGATION
-   ======================================== */
-
+/* Navigation — stacked for small screens */
 nav ul {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+nav li {
+    width: 100%;
+    max-width: 280px;
+}
+
 nav a {
+    display: block;
+    padding: 0.7rem 1rem;
     color: #f5f1e8;
-    font-family: "DM Sans", Arial, sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 2px;
     text-decoration: none;
-    text-transform: uppercase;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
-    transition: 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
 }
 
-nav a:hover {
-    color: #b9d0df;
-    border-bottom: 2px solid #b9d0df;
+nav a:hover,
+nav a:focus-visible {
+    background-color: #9fb6c9;
+    color: #10233f;
 }
 
-nav a:focus {
-    color: #b9d0df;
-    border-bottom: 2px solid #b9d0df;
-    outline: 2px solid #f5f1e8;
-    outline-offset: 5px;
-}
-
-
-/* ========================================
-   MAIN PAGE LAYOUT
-   ======================================== */
-
+/* Main content — flexible container */
 main {
+    width: 100%;
     max-width: 1050px;
     margin: 0 auto;
-    padding: 4.5rem 2.5rem;
+    padding: 2.5rem 1.25rem;
 }
 
 section {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
-
-/* ========================================
-   TYPOGRAPHY
-   ======================================== */
+/* Typography */
+h2,
+h3 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: normal;
+    line-height: 1.2;
+}
 
 h2 {
-    color: #10233f;
-    font-family: "DM Serif Display", Georgia, serif;
-    font-size: 3.5rem;
-    font-weight: 400;
-    letter-spacing: -1px;
-    line-height: 1.1;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin: 0.5rem 0 1.5rem;
 }
 
 h3 {
-    color: #48647a;
-    font-family: "DM Sans", Arial, sans-serif;
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    line-height: 1.4;
-    text-transform: uppercase;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    margin: 1.5rem 0 0.75rem;
 }
 
 p {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
+    margin: 0 0 1.25rem;
 }
-
-
-/* ========================================
-   CURSIVE ACCENT CLASS
-
-   We will add class="script-accent"
-   to specific HTML text later.
-   ======================================== */
 
 .script-accent {
-    color: #58758d;
-    font-family: "Sacramento", cursive;
-    font-size: 3.2rem;
-    font-weight: 400;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: 0;
+    font-family: 'Sacramento', cursive;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    line-height: 1.3;
+    margin-bottom: 0;
+    color: #627d97;
 }
-
-
-/* ========================================
-   INTRO / FEATURE TEXT CLASS
-
-   We can add class="intro"
-   to important paragraphs later.
-   ======================================== */
 
 .intro {
-    color: #29445c;
-    font-family: "DM Serif Display", Georgia, serif;
-    font-size: 1.5rem;
-    line-height: 1.5;
+    font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+    line-height: 1.8;
+    max-width: 750px;
 }
 
-
-/* ========================================
-   LINKS
-   ======================================== */
-
+/* Links */
 main a {
-    color: #365f7d;
-    font-weight: 600;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 4px;
-    transition: 0.2s ease;
+    color: #315b82;
+    text-underline-offset: 3px;
 }
 
-main a:hover {
+main a:hover,
+main a:focus-visible {
     color: #10233f;
-    text-decoration-thickness: 3px;
 }
 
-
-/* ========================================
-   IMAGES
-   ======================================== */
-
-
+/* Flexible images */
 img {
     display: block;
     max-width: 100%;
     height: auto;
-    margin-top: 1.5rem;
-    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     border: 3px solid #10233f;
     border-radius: 4px;
-    box-shadow: 10px 10px 0 #aabcca;
+    box-shadow: 6px 6px 0 #aabcca;
 }
-
-
-/* Profile image class — we will add this
-   class to the homepage image later */
 
 .profile-photo {
-    width: 350px;
-    border-radius: 4px;
+    width: 100%;
+    max-width: 350px;
 }
-
-
-/* Hobbies image class — we can add this
-   to hobby images later */
 
 .hobby-photo {
-    width: 300px;
-    margin-right: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    margin-right: 0;
 }
 
-
-/* ========================================
-   SPECIAL FEATURE SECTION
-
-   This gives us an optional dark section
-   to use later on one of the pages.
-   ======================================== */
-
+/* Featured content sections */
 .feature-section {
     background-color: #10233f;
     color: #f5f1e8;
-    padding: 3rem;
-    border-radius: 4px;
+    padding: 1.5rem;
+    border-radius: 5px;
 }
 
 .feature-section h2,
@@ -235,58 +172,45 @@ img {
 }
 
 .feature-section a {
-    color: #b9d0df;
+    color: #c4d7e7;
 }
 
-.feature-section a:hover {
+.feature-section a:hover,
+.feature-section a:focus-visible {
     color: #ffffff;
 }
 
-
-/* ========================================
-   ID SELECTOR
-
-   Required by the assignment.
-   We will add id="home-intro"
-   to the homepage HTML later.
-   ======================================== */
-
-#home-intro {
-    border-left: 5px solid #9fb6c9;
-    padding-left: 2rem;
+.feature-section img {
+    border-color: #f5f1e8;
+    box-shadow: 6px 6px 0 #9fb6c9;
 }
 
+/* Home introduction */
+#home-intro {
+    max-width: 900px;
+}
 
-/* ========================================
-   FOOTER
-   ======================================== */
-
+/* Footer */
 footer {
     background-color: #10233f;
     color: #f5f1e8;
     text-align: center;
-    padding: 2.5rem 1rem;
-    margin-top: 3rem;
-    border-top: 6px solid #9fb6c9;
+    padding: 1.5rem 1rem;
 }
 
 footer p {
     margin: 0;
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
 }
 
-
 /* ========================================
-   RESPONSIVE DESIGN
+   MEDIA QUERY 1 — TABLETS
+   600px and wider
    ======================================== */
 
-@media (max-width: 650px) {
+@media screen and (min-width: 600px) {
 
     header {
-        padding: 2rem 1.5rem;
+        padding: 2.5rem 2rem;
     }
 
     header h1 {
@@ -294,28 +218,84 @@ footer p {
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 0.75rem;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    nav li {
+        width: auto;
+    }
+
+    nav a {
+        padding: 0.65rem 1rem;
     }
 
     main {
-        padding: 3rem 1.5rem;
+        padding: 3.5rem 2rem;
     }
 
-    h2 {
-        font-size: 2.6rem;
-    }
-
-    .script-accent {
-        font-size: 2.6rem;
-    }
-
-    img {
-        width: 100%;
-        box-sizing: border-box;
+    section {
+        margin-bottom: 4rem;
     }
 
     .feature-section {
-        padding: 2rem;
+        padding: 2.5rem;
     }
+
+    .hobby-photo {
+        display: inline-block;
+        width: 45%;
+        max-width: 300px;
+        margin-right: 1rem;
+        vertical-align: top;
+    }
+
+}
+
+/* ========================================
+   MEDIA QUERY 2 — DESKTOP
+   1000px and wider
+   ======================================== */
+
+@media screen and (min-width: 1000px) {
+
+    header {
+        padding: 3rem 2rem;
+    }
+
+    header h1 {
+        font-size: 4rem;
+    }
+
+    nav ul {
+        gap: 2rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 4.5rem 2.5rem;
+    }
+
+    section {
+        margin-bottom: 5rem;
+    }
+
+    .feature-section {
+        padding: 3rem;
+    }
+
+    .hobby-photo {
+        width: 300px;
+        margin-right: 1.5rem;
+    }
+
+    img {
+        box-shadow: 10px 10px 0 #aabcca;
+    }
+
 }

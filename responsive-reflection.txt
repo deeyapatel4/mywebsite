@@ -1,0 +1,19 @@
+
+Responsive Web Design Reflection
+IS 409 – Web Technologies & Techniques
+
+1. What changes did you make to improve responsiveness?
+
+I updated my personal website using a mobile-first approach, meaning I designed the default CSS for smaller screens before adding styles for larger devices. I added two media queries at 600px and 1000px to adjust the layout for tablets and desktops. I also used flexible image widths, responsive font sizes with clamp(), and a max-width container to prevent content from becoming too stretched. I updated my navigation so that links stack vertically on phones and display horizontally on larger screens. These changes help maintain the same visual identity while making the website easier to use on different devices.
+
+2. What screen sizes did you test?
+
+[Complete after testing: list the actual viewport widths you checked.]
+
+3. What was the biggest challenge?
+
+The biggest challenge was figuring out how to preserve my website's original design while making it work on smaller screens. My website uses large headings, decorative fonts, and multiple images, so I needed to make sure those elements remained visually balanced without taking up too much space. Using flexible measurements and media queries allowed me to adjust the presentation without completely changing the design.
+
+4. What did you learn about designing for mobile users?
+
+I learned that responsive design is more than just shrinking a desktop website to fit a phone. Mobile users have less screen space and need navigation, text, and images to be organized differently. Designing mobile-first helped me prioritize readability, comfortable spacing, and accessible navigation before adding more complex layouts for larger screens. I also learned that breakpoints should support the content rather than simply target specific devices.
