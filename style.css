@@ -299,3 +299,130 @@ footer p {
     }
 
 }
+
+
+/* ==========================================
+   JAVASCRIPT INTERACTIVE SECTION
+   ========================================== */
+
+.interactive-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.interactive-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.interactive-section > p {
+    margin-bottom: 30px;
+}
+
+
+/* Interactive feature cards */
+
+.interactive-card {
+    background-color: #f1f5fa;
+    color: #142c49;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 12px;
+    border: 1px solid #d6e0eb;
+    max-width: 650px;
+    box-sizing: border-box;
+}
+
+.interactive-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #142c49;
+}
+
+.interactive-card p {
+    line-height: 1.7;
+}
+
+
+/* Visitor name input */
+
+.interactive-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.interactive-card input {
+    padding: 12px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #6a7b8c;
+    border-radius: 6px;
+    font: inherit;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+
+
+/* Interactive buttons */
+
+.interactive-card button {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 8px;
+    background-color: #173b63;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.interactive-card button:hover {
+    background-color: #285b8d;
+}
+
+
+/* Keyboard accessibility */
+
+.interactive-card button:focus-visible,
+.interactive-card input:focus-visible {
+    outline: 3px solid #bd6519;
+    outline-offset: 3px;
+}
+
+
+/* Dynamic messages */
+
+#greeting,
+#quoteDisplay {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#funFacts {
+    margin-top: 15px;
+}
+
+
+/* Mobile responsiveness */
+
+@media (max-width: 600px) {
+
+    .interactive-section {
+        padding: 20px 12px;
+    }
+
+    .interactive-card {
+        padding: 20px 15px;
+    }
+
+    .interactive-card button {
+        max-width: 100%;
+    }
+
+}
+
