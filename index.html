@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Deeya Patel</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- External JavaScript file -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -66,7 +70,127 @@
 
         </section>
 
+
+        <!-- JAVASCRIPT INTERACTIVE FEATURES -->
+
+        <section class="interactive-section">
+
+            <h2>Let's Get Interactive!</h2>
+
+            <p>
+                Get to know me a little better through these
+                interactive features.
+            </p>
+
+
+            <!-- Feature 1: Personalized Greeting -->
+
+            <div class="interactive-card">
+
+                <h3>First, What's Your Name?</h3>
+
+                <label for="visitorName">Enter your name:</label>
+
+                <input
+                    type="text"
+                    id="visitorName"
+                    placeholder="Your name">
+
+                <button type="button" id="greetButton">
+                    Say Hello!
+                </button>
+
+                <p id="greeting" aria-live="polite"></p>
+
+            </div>
+
+
+            <!-- Feature 2: Change Text -->
+
+            <div class="interactive-card">
+
+                <h3>A Little About Me</h3>
+
+                <p id="aboutMessage">
+                    I love meeting new people, exploring new places,
+                    and trying new things.
+                </p>
+
+                <button type="button" id="changeButton">
+                    Learn More About Me
+                </button>
+
+            </div>
+
+
+            <!-- Feature 3: Change Background Color -->
+
+            <div class="interactive-card">
+
+                <h3>Switch Up the Vibe</h3>
+
+                <p>
+                    Want to change the look of this page?
+                </p>
+
+                <button type="button" id="colorButton">
+                    Change Background
+                </button>
+
+            </div>
+
+
+            <!-- Feature 4: Show and Hide Content -->
+
+            <div class="interactive-card">
+
+                <h3>Fun Facts About Me</h3>
+
+                <button
+                    type="button"
+                    id="factButton"
+                    aria-expanded="false"
+                    aria-controls="funFacts">
+                    Show Fun Facts
+                </button>
+
+                <div id="funFacts" hidden>
+
+                    <p>
+                        I love traveling, cooking Thai food,
+                        and practicing yoga.
+                    </p>
+
+                    <p>
+                        I've also spent years dancing and enjoy
+                        exploring new cultures.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature 5: Random Quote -->
+
+            <div class="interactive-card">
+
+                <h3>A Little Inspiration</h3>
+
+                <p id="quoteDisplay" aria-live="polite">
+                    Click below for some inspiration!
+                </p>
+
+                <button type="button" id="quoteButton">
+                    New Quote
+                </button>
+
+            </div>
+
+        </section>
+
     </main>
+
 
     <footer>
         <p>&copy; 2026 Deeya Patel</p>
